@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Paises</h1>
+    Qual país você mora? <input type="HMinnerHTML" name="country" id="country">
+    <input type="button" value="Submit" onclick="verify()"> 
+
+    <div id="res">
+
+    </div>
+    <script>
+        function verify() {
+            var country = document.getElementById('country').value;
+            var res = document.getElementById ('res')
+            var pais = 'Brasil'
+
+            res.innerHTML = `<p>Você mora em ${country}! </p>`
+            if (country == pais){
+                res.innerHTML += "<p>Você é brasileiro. </p>"
+            } else {
+                res.innerHTML += "<p>Você é estrangeiro. </p>"
+            }
+        }
+    </script>
+</body>
+</html>
